@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products - MediEquip Store</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="products.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">MediEquipStore.com</a>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="hero-banner">
+    <h1>All Products</h1>
+    <p>Explore our carefully curated medical and health products</p>
+  </section>
+
+  <!-- Breadcrumb -->
+  <section style="padding: 0 2rem; margin-bottom: 1rem;">
+    <p style="color: #666; font-size: 0.9rem;">Home > Product</p>
+  </section>
+
+  <!-- Search and Sort -->
+  <section style="display: flex; justify-content: space-between; padding: 0 2rem; align-items: center;">
+    <input type="text" placeholder="Search product..." style="padding: 0.5rem 1rem; width: 60%; border: 1px solid #ccc; border-radius: 25px;">
+    <select style="padding: 0.5rem 1rem; border-radius: 25px; border: 1px solid #ccc;">
+      <option value="">Sort By</option>
+      <option value="popular">Most Popular</option>
+      <option value="latest">Latest</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <h2>Product Categories</h2>
+    <div class="category-buttons">
+      <button>Medical Equipment</button>
+      <button>Health & Beauty</button>
+      <button>Supplements</button>
+      <button>Personal Care</button>
+      <button>Diagnostics</button>
+      <button>Accessories</button>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="product1.jpg" alt="Product 1" />
+      <h3>Thermometer</h3>
+      <p>$15.99</p>
+      <p><i class="fa fa-star" style="color:gold;"></i> 4.5 (120)</p>
+    </div>
+    <div class="product-card">
+      <img src="product2.jpg" alt="Product 2" />
+      <h3>Digital BP Monitor</h3>
+      <p>$49.99</p>
+      <p><i class="fa fa-star" style="color:gold;"></i> 4.8 (240)</p>
+    </div>
+    <div class="product-card">
+      <img src="product3.jpg" alt="Product 3" />
+      <h3>Face Mask Pack</h3>
+      <p>$9.99</p>
+      <p><i class="fa fa-star" style="color:gold;"></i> 4.2 (300)</p>
+    </div>
+    <!-- Add more product cards as needed -->
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <h2>Subscribe for Updates</h2>
+    <p>Get the latest health tips and product news.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Enter your email" />
+      <button>Subscribe</button>
+    </div>
+  </section>
+  
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>LEARN</h3>
+            <ul>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Getting Started</a></li>
+                <li><a href="#">Free Courses</a></li>
+                <li><a href="#">Browse Articles</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>GENERAL</h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>NEWSLETTER</h3>
+            <form class="footer-newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="#">Back To Top</a>
+        <p>&copy; 2024 MediEquipStore. All rights reserved.</p>
+    </div>
+</footer>
+
+  <!-- Live Chat Widget -->
+  <div style="position: fixed; bottom: 20px; right: 20px;">
+    <button style="background-color: #4664bd; color: white; padding: 0.8rem 1rem; border: none; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <i class="fas fa-comment-dots"></i>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

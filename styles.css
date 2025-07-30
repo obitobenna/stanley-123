@@ -1,0 +1,664 @@
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Updated to use Google Fonts */
+    overflow-x: hidden;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #3f3f46; /* Updated color */
+    color: #fff;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #4169E1; /* Updated color */
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.nav-links a:hover {
+    background-color:#fff; /* Updated color */
+}
+
+/* Hamburger Menu */
+.burger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #4169E1; /* Updated color */
+}
+ .btn-primary{
+    border: #fff solid 2px;
+    background-color: #4169E1;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+ }
+ .btn-primary:hover{
+    background-color: #4c64aa;
+ }
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    header .nav-links{
+        position: fixed;
+        top:8px;
+        right: 0px;
+        background: rgba(100, 99, 99, 0.5);
+        height: calc(100vh - 100px);
+        width:50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+    .nav {
+        position: fixed;
+        right: 0;
+        top: 60px; /* Adjust based on your header's height */
+        background-color:#1A1A1D; /* Background color */
+        width: 100%; /* Full width */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-out;
+        flex-direction: column; /* Stack the links vertically */
+        text-align: center; /* Center-align the link texts */
+    }
+
+    .nav-active {
+        transform: translatex(0); /* Show the nav */
+        
+        
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+    }
+
+    .nav-links li {
+        padding: 15px 0; /* Add some padding to each link */
+        
+    }
+
+    .nav-links a {
+        width: 100%;
+        display: block;
+    }
+
+
+    .burger.active  {
+        transform: rotate(90deg);
+        transition: transform 0.3s ease;
+    }
+
+}
+.hero {
+    background-image: url('medicals.jpg');
+    background-size: cover;
+    background-position:center ;
+    color: #ffffff;
+    text-align: center;
+    padding: 150px 20px;
+
+}
+
+.hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+.text{
+    color: #fff;
+}
+
+.about-container {
+    padding-top: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between the content and image */
+    
+}
+.about-image img {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Maximum size */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-content, .about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-content {
+    padding-right: 50px;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color:#4169E1;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-btn-secondary {
+    background-color: #4169E1;
+    color: #ffffff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.about-btn-secondary:hover {
+    background-color: #4c64aa;
+}
+
+.about-image img {
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .about-content {
+        padding-right: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content, .about-image {
+        flex: none; /* Resets flex sizing */
+        max-width: 100%; /* Allows content and image to fill the container */
+        padding: 0; /* Resets padding */
+    }
+
+    .about-content {
+        padding-bottom: 20px; /* Adds space between the content and image */
+    }
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 700;
+}
+
+.reasons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.reason {
+    flex: 1;
+    max-width: 300px;
+    min-width: 250px;
+    margin: 15px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.reason:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.reason i {
+    font-size: 3rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.reason i:hover {
+    transform: scale(1.2);
+}
+
+.reason h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.reason p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Partnership Section */
+.partnership {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    font-family: 'Arial', sans-serif;
+}
+
+.partnership h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.partnership p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.partnership .btn-primary {
+    background-color: #00aaff;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.partnership .btn-primary:hover {
+    background-color: #0088cc;
+    transform: translateY(-2px);
+}
+
+/* FAQ Section */
+.faq {
+    padding: 80px 20px;
+    background-color: #e9ecef;
+    font-family: 'Arial', sans-serif;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
+}
+
+.faq-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reasons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .reason {
+        max-width: 90%;
+    }
+
+    .faq-items {
+        gap: 15px;
+    }
+
+    .faq-item {
+        padding: 15px;
+    }
+}
+
+
+.testimonials {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.testimonial-item {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+
+.testimonial-item.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.testimonial-item p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial-item span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0077b6;
+}
+
+.appointment {
+    background-color: #f4f7f6;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.appointment-container h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.appointment-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-appointment {
+    background-color: #00aaff;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-appointment:hover {
+    background-color: #0099cc;
+    transform: translateY(-2px);
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    color: #4169E1;
+    margin-bottom: 40px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4169E1;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #4c64aa;
+}
+
+.contact, .our-products {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f7f6;
+}
+
+.contact h2, .our-products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact p, .our-products p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-emergency, .btn-products {
+    background-color:  #4169E1;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-emergency:hover, .btn-products:hover {
+    background-color:  #4169E1;
+    transform: translateY(-2px);
+}
+
+
+
+.footer {
+    background-image: url('medicals\ footer.jpg'); /* Add your medical-themed background image here */
+    background-size: cover;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 10px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #b3e5fc;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+.live-chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4664bd;
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .live-chat-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .live-chat-button img {
+    width: 28px;
+    height: 28px;
+  }
+  
+
+
+
+
+
+
